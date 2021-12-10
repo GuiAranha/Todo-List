@@ -1,7 +1,13 @@
 window.onload = function () {
     let botaoCriar = document.getElementById('criar-tarefa');
     let botaoRemover = document.getElementById('remover-finalizados');
+    let botaoApagar = document.getElementById('apaga-tudo');
     let lista = document.getElementById('lista-tarefas');
+
+
+    botaoApagar.addEventListener('click', function(event){
+        lista.innerHTML = "";
+    });
 
     botaoRemover.addEventListener('click', function(event){
         for (let i = lista.firstElementChild; i !== null; i = i.nextElementSibling){
